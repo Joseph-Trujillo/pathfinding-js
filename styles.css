@@ -1,0 +1,149 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #4a90e2;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+
+  #controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  #add-row, #remove-row, #add-col, #remove-col {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  #start {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  #reset {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+
+  #grid {
+    display: grid;
+    gap: 2px;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    border: 2px solid #bbb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .cell {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: transparent;
+  }
+  
+  .cell:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .cell.start {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .cell.end {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .cell.obstacle {
+    background-color: #7f8c8d;
+  }
+  
+  .cell.visited {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .cell.path {
+    background-color: #f1c40f;
+    color: white;
+  }
+  
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+  
+    .cell {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
